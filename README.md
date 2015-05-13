@@ -27,12 +27,12 @@ IP Address detection
 Because your site will be proxied via CloudFlare, the global variable `$_SERVER["REMOTE_ADDR"]` will contain a CloudFlare IP address, not the client IP.  There are two ways this can be corrected. 
 
 
-# Default Method: Use X-Forwarded-For Headers
+### Default Method: Use X-Forwarded-For Headers
 
 The CloudFlare module will automatically modify the incoming `$_SERVER["HTTP_X_FORWARDED_FOR"]` header to remove CloudFlare IPs from the list of possible connecting IP addresses. This means that you can use Drupal's built-in `X-Forwarded-For` header handling and evertying will "just work". There is no special configuration required for this set-up. If you are using a reverse proxy such as varnish, you can configure your `$conf['reverse_proxy_addresses']` array just as before and everything should work as expected.
 
 
-# Alternative Method: Use CF-Connecting-IP header. 
+### Alternative Method: Use CF-Connecting-IP header. 
 
 CloudFlare provides a header called `CF-Connecting-IP`. We can use this header to detect the correct client IP address. When the cloudflare module is configured to use `CF-Connecting-IP` it will use this to set `$_SERVER["REMOTE_ADDR"]`, and disable the processing of X-Forwarded-For headers. To use this set-up, simply place this code somewhere in your `settings.php` file:
 

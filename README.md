@@ -15,10 +15,10 @@ How do I get started with CloudFlare?
 1. Visit http://www.cloudflare.com to sign up for a free account.
 2. Follow their 5-minute configuration wizard.
 3. Install this module and configure
-      A. Install and Enable this module.
-      B. Assign permissions to administer module (if you are not logged in as the user 1, admin)
-      C. Save your email address and CloudFlare API key to the CloudFlare administration screen on your Drupal web site (`admin/settings/cloudflare`).
-      D. Configure IP address detection as instructed below
+      - Install and Enable this module.
+      - Assign permissions to administer module (if you are not logged in as the user 1, admin)
+      - Save your email address and CloudFlare API key to the CloudFlare administration screen on your Drupal web site (`admin/settings/cloudflare`).
+      - Configure IP address detection as instructed below
 
 
 IP Address detection
